@@ -1,0 +1,22 @@
+{
+    "name": "GeoDjango Heroku Template",
+    "description": "Starting project for GeoDjango 2.1 on Heroku.",
+    "buildpacks": [
+	{
+	    "url": "https://github.com/TrailStash/heroku-geo-buildpack"
+	},
+	{
+	    "url": "heroku/python"
+	}
+    ],
+    "env": {
+	"DJANGO_SECRET_KEY": {
+	    "description": "Secret key for Django.",
+	    "generator": "secret"
+	},
+	"BUILD_WITH_GEO_LIBRARIES": {
+	    "description": "Necessary for GeoDjango/PostGIS",
+	    "value": 1
+	},
+    }
+}
