@@ -1,0 +1,1 @@
+web: gunicorn geodjango_heroku_template.local_wsgi --log-file -
